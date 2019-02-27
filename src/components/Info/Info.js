@@ -1,12 +1,12 @@
 import React from 'react';
 
-function ReadList (props) {
+function Info (props) {
 
 	return (
 		<div className='Info'>
-			<h2>Some info1</h2>
+			<h2>Some info</h2>
 		</div>
 	)
 }
 
-export default ReadList;
+export default Info;
