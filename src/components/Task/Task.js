@@ -1,12 +1,41 @@
-import React from 'react';
+// onChange={(event)=>{this.props.change(event, this.props.id)}}
+// onClick={() => {this.props.delete(this.props.id)}}
 
-function Task (props) {
 
-	return (
-		<div className='Task'>
-			<li>{props.name}</li>
-		</div>
-	)
-}
+
+import React, { Component } from 'react';
+import './Task.css';
+
+
+class Task extends Component {
+
+	shouldComponentUpdate(nextProps) {
+		if (nextProps.text!== this.props.text) {
+			console.log("да");
+			return true;
+		}
+		else {
+			console.log("нет");
+			return false;
+		}
+	};
+
+	render() {
+		return (
+			<div className="col-3">
+				<div className="Task form-row mt-3">
+					<div className="form-group col-md-11">
+						<input type="text" className="form-control" id="taskInput"  value={this.props.text}/>
+					</div>
+					<div className = "form-group col-md-1" >
+						<i className="far fa-trash-alt fa-2x"></i>
+					</div>
+				</div>
+			</div>
+		)
+	}
+};
+
 
 export default Task;
+

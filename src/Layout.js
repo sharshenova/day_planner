@@ -8,6 +8,7 @@ class Layout extends Component {
 		return <div className="App">
 			<header className="mb-5">
 				<span className='mr-5'><NavLink to='/'>Home</NavLink></span>
+				<span className='mr-5'><NavLink to='/todo'>What to do</NavLink></span>
 				<span className='mr-5'><NavLink to='/toread'>What to read</NavLink></span>
 				<span><NavLink to='/towatch'>What to watch</NavLink></span>
 			</header>

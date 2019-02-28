@@ -3,6 +3,7 @@ import './App.css';
 import MainPage from './containers/MainPage/MainPage';
 import ReadList from './containers/ReadList/ReadList';
 import WatchList from './containers/WatchList/WatchList';
+import ToDoList from './containers/ToDoList/ToDoList';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
 
@@ -15,6 +16,7 @@ class App extends Component {
 							<Switch>
 									<Route path="/toread" exact component={ReadList}/>
 									<Route path="/towatch" exact component={WatchList}/>
+									<Route path="/todo" exact component={ToDoList}/>
 									<Route path="/" exact component={MainPage}/>								
 							</Switch>
 						</Layout>

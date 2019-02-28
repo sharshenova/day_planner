@@ -2,3 +2,9 @@
 	max-width: 95%;
 	margin: 20px auto;
 }
+
+.TaskContainer {
+	margin: 15px 0;
+	border: 0;
+	width: 100%;
+}
