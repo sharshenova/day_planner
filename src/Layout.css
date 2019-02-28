@@ -1,0 +1,9 @@
+header {
+	display: inline;
+	text-transform: uppercase;
+}
+
+header span a {
+	color: white;
+	font-weight: bold;
+}

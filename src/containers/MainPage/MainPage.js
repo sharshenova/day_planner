@@ -9,10 +9,12 @@ class MainPage extends Component {
 		super(props);
 		this.state = {};
 		this.state.tasks = [
-			{name: 'To do HW', number: 1, isMain: true},
-			{name: 'To call sister', number: 2, isMain: false},
-			{name: 'To read the book', number: 3, isMain: false},
-			{name: 'To walk with the dog', number: 4, isMain: true}
+			{date: 1, name: 'To do HW', isMain: true},
+			{date: 1, name: 'To call sister', isMain: false},
+			{date: 1, name: 'To walk with the dog', isMain: true},
+			{date: 2, name: 'To read the book', isMain: false},
+			{date: 2, name: 'To walk with the cat', isMain: true},
+			{date: 2, name: 'To meet Dan', isMain: true},
 		];
 	}
 

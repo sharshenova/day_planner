@@ -8,8 +8,7 @@ function ToDoList (props) {
 			{props.tasks.map(task => 
 				<Task
 					name={task.name}
-					key={task.number}
-					number={task.number}
+					key={task.name}
 				/>
 			)}
 		</div>

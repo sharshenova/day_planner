@@ -4,7 +4,7 @@ function Task (props) {
 
 	return (
 		<div className='Task'>
-			<p>{props.number}. {props.name}</p>
+			<li>{props.name}</li>
 		</div>
 	)
 }
