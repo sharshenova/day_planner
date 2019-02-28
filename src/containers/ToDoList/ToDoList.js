@@ -1,10 +1,8 @@
-import React, {Component, Fragment} from 'react';
-import Info from '../../components/Info/Info';
-import ToDoList from "../ToDoList/ToDoList";
+import React, { Component } from 'react';
+import Task from "../../components/Task/Task";
 
+class ToDoList extends Component {
 
-
-class MainPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -20,14 +18,17 @@ class MainPage extends Component {
 
 	render() {
 		return (
-			<Fragment>
-				<Info/>
-				<ToDoList
-					tasks={this.state.tasks}
-				/>
-			</Fragment>
+			<div className="Task">
+				{this.state.tasks.map(task => 
+					<Task
+						name={task.name}
+						key={task.name}
+					/>
+				)}
+			</div>
 		)
 	}
 }
 
-export default MainPage;
+
+export default ToDoList;
