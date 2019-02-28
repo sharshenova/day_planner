@@ -21,40 +21,39 @@ class ToDoList extends Component {
 		};
 	};
 
-	// // обновление элемента
-	// updateTask = (event, id) => {
-	// 	const tasks = [...this.state.tasks];
+	// обновление элемента
+	updateTask = (event, id) => {
+		const tasks = [...this.state.tasks];
 
-	// 	tasks.forEach(task => {
-	// 		if (task.id === id) {
-	// 			task.text = event.target.value;
-	// 			console.log("обновлено")
-	// 		}
-	// 	});
+		tasks.forEach(task => {
+			if (task.id === id) {
+				task.text = event.target.value;
+				console.log("обновлено")
+			}
+		});
 
-	// 	this.setState({tasks: tasks});
-	// 	// сохраняем элементы в localStorage
-	// 	localStorage.setItem('savedTasks', JSON.stringify(tasks));
-	// };
+		this.setState({tasks: tasks});
+		// сохраняем элементы в localStorage
+		localStorage.setItem('savedTasks', JSON.stringify(tasks));
+	};
 
-	// // удаление элемента
-	// deleteTask = (id) => {
-	// 	let taskId = this.state.tasks.findIndex(task => {
-	// 			return task.id === id;
-	// 	});
+	// удаление элемента
+	deleteTask = (id) => {
+		let taskId = this.state.tasks.findIndex(task => {
+				return task.id === id;
+		});
 
-	// 	const tasks = [...this.state.tasks];
-	// 	tasks.splice(taskId, 1);
+		const tasks = [...this.state.tasks];
+		tasks.splice(taskId, 1);
 
-	// 	this.setState({
-	// 			...this.state,
-	// 			tasks
-	// 	});
-	// 	// сохраняем элементы в localStorage
-	// 	localStorage.setItem('savedTasks', JSON.stringify(tasks));		
-	// };
-								// delete={this.deleteTask}
-								// change={this.updateTask}
+		this.setState({
+				...this.state,
+				tasks
+		});
+		// сохраняем элементы в localStorage
+		localStorage.setItem('savedTasks', JSON.stringify(tasks));		
+	};
+
 
 
 	render() {
@@ -65,6 +64,8 @@ class ToDoList extends Component {
 							key={task.id} 
 							id={task.id}
 							text={task.text}
+							delete={this.deleteTask}
+							change={this.updateTask}
 						/>
 					})}
 			</div>
